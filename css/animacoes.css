@@ -1,0 +1,111 @@
+.naSecao{
+  border-bottom: 2px solid #FBD7B7;
+  color: #202020;
+  transition: 0.3s;
+}
+
+body.dark-mode .naSecao{
+  color: white;
+}
+
+#dark{
+  cursor: pointer;
+  display: block;
+  animation: rotate 1s linear;
+  transition: 0.5s;
+}
+
+#normal{
+  display: none;
+  transition: 0.5s;
+}
+
+#dark.active{
+  display: none !important;
+}
+
+#normal.active{
+  animation: rotate 1s linear;
+  display: block !important;
+  cursor: pointer;
+}
+
+@keyframes rotate{
+  0%{
+      transform: rotate(0deg);
+  }
+  50%{
+      transform: rotate(180deg);
+  }
+  100%{
+      transform: rotate(360deg);
+  }
+}
+
+
+.hidden{
+  visibility: hidden;
+  transition: 0.3s;
+  opacity: 0;
+  transform: translate3d(0px, -20px, 0px);
+}
+
+.hiddenIcones{
+  visibility: hidden !important;
+  transform: translate3d(-40px, 0px, 0px);
+}
+
+.displayIcones{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: -2px;
+  padding-top: 24px;
+  padding-right: 24px;
+  max-width: 50%;
+  transition: 0.3s;
+  transform: translate3d(0px,0px,0px);
+}
+
+#fir{
+  background-color: #202020;
+}
+#sec{
+  background-color: white;
+}
+#thi{
+  background-color: #202020;
+  margin-left: 24px;
+  max-width: 45%;
+}
+#fou{
+  background-color: white;
+}
+
+.textoIcones{
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.animate{
+  transform: translate3d(0px, 0px, 0px);
+  transition: 0.3s;
+}
+
+.crescer:hover{
+  max-width: 105%;
+  transition: 0.3s;
+}
+
+.crescer:not(:hover){
+  max-width: 100%;
+  transition: 0.3s;
+}
+
+.topo{
+  opacity: 0;
+  transform: translate3d(0px, 0px, 0px);
+  transition: 0.3s;
+}

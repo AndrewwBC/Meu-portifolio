@@ -1,0 +1,26 @@
+.footer{
+  text-align: center;
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  align-items: center;
+  background: rgba(46, 46, 46, 0.3);
+  border-radius: 0px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 1);
+  backdrop-filter: blur(5.1px);
+  -webkit-backdrop-filter: blur(10.1px);
+  border: 1px solid rgba(46, 46, 46, 0.4);
+  padding: 24px 0px 6px 0px;
+}
+
+@media(max-width:768px){
+   
+  .footer{
+    padding-top: 12px;
+    gap: 48px;
+  }
+
+  .footerImg{
+    width: 48px !important;
+  }
+}

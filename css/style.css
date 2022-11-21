@@ -1,0 +1,256 @@
+body{
+  background-color: #FBD7A0;
+  transition: 0.5s;
+}
+
+body.dark-mode{
+  background-color: #000;
+  transition: 0.5s;
+}
+
+body.dark-mode p{
+  color: #f5f5f5;
+}
+
+body.dark-mode h1{
+  color: #ffffff;
+}
+
+
+body.dark-mode h2{
+  color: #ffffff;
+}
+
+body.dark-mode span{
+  color: #ffffff;
+}
+
+.span{
+  color: #151515;
+}
+
+.perfil{
+  border-radius: 12px;
+  margin: 0 auto;
+  border: 8px solid #303030;
+}
+
+.container{
+  max-width: 1080px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/*
+fontes :
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;
+*/
+
+.fontP{
+  font-family: 'poppins', sans-serif;
+  font-size: 18px;
+  line-height: 1.25;
+  letter-spacing: 0.5px;
+  color: #202020;
+}
+
+.pIntro{
+  line-height: 1.40;
+}
+
+nav li a{
+  border-bottom: 2px solid transparent;
+}
+
+.fontLi{
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  color: beige;
+}
+
+.flexMenu{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 18px 0px 18px;
+
+}
+
+.header{
+  background-color: #151515;
+  position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+	opacity: 0.95; 
+  /* From https://css.glass */
+  background: rgba(46, 46, 46, 0.3);
+  border-radius: 0px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5.1px);
+  -webkit-backdrop-filter: blur(10.1px);
+  border: 1px solid rgba(46, 46, 46, 0.4);
+  
+}
+
+.flexLista{
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.flexLista li a{
+  margin-top: 6px;
+  padding-bottom: 6px;
+}
+
+.flexColumn{
+  display: flex;
+  flex-direction: column;
+}
+
+.gridIntro{
+  margin-top: 160px;
+  margin-bottom: 100px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 0px 64px;
+}
+
+.gridIntro p{
+  margin-bottom: 24px;
+}
+
+.gridIntro h1{
+  margin-top: 38px;
+  margin-bottom: 32px;
+}
+
+.título{
+  font-family: 'Poppins', sans-serif;
+  font-size: 48px;
+  margin-bottom: 18px;
+  color: #303030;
+  font-weight: 600;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: rgba(46, 46, 46, 0.3);
+  border-radius: 0px;
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(10.1px);   
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #303030;    
+  border-radius: 6px;      
+}
+
+@media(max-width:768px){
+  .gridIntro{
+    padding: 0px 16px 0px 16px;
+    grid-template-columns: 1fr;
+    place-items: center;
+    margin-bottom: 64px;
+  }
+  .gridIntro .título{
+    font-size: 40px;
+  }
+}
+
+@media(max-width:500px){
+  .flexMenu{
+    justify-content: space-between;
+    padding: 0px 24px 0px 12px;
+  }
+  .flexMenu{
+    margin-left: -120px;
+  }
+  .perfil{
+    max-width: 95%;
+  }
+}
+
+
+@media(max-width: 768px){
+
+  .mobile-btn {
+    display: block;
+    width: 36px;
+    color: bisque;
+    height: 36px;
+    border-top: 4px solid;
+    margin: 20px 20px 0 0;
+    position: relative;
+    cursor: pointer;
+    float: left;
+  }
+  
+  .mobile-btn::after, .mobile-btn::before{
+    content: "";
+    display: block;
+    height: 4px;
+    margin-top: 6px;
+    background-color: currentColor;
+    position: relative;
+    transition: transform .5s ease;
+  }
+  
+  .mobile-btn.active {
+    border-top-color: transparent;
+  }
+  
+  .mobile-btn.active::after{
+    margin-top: 0px;
+    top: 2px;
+    transform: rotate(45deg);
+  }
+  
+  .mobile-btn.active::before{
+    margin-top: 0px;
+    top: 6px;
+    transform: rotate(135deg);
+  }
+  
+  .mobile-menu {
+    position: fixed;
+    background-color: #ab7145;
+    padding: 10px;
+    right: 0px;
+    top: 80px;
+    border-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate3d(60px, 0px, 0px);
+    transition: .3s;
+  }
+  
+  .mobile-menu.active{
+    opacity: 1;
+    visibility: visible;
+    transform: translate3d(0px, 0px, 0px);
+  }
+  
+  .flexMobile{
+    flex-direction: column !important;
+  }
+  
+  .flexMobile a{
+    border-bottom: 2px solid;
+    padding: 2px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
